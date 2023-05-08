@@ -1,0 +1,50 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.accordion {
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  transition: 0.4s;
+  position: relative;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+.accordion .toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.active .toggle-icon:after {
+  content: "-" !important;
+}
+.accordion:not(.active) .toggle-icon:after {
+  content: "+" !important;
+  /*   position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%); */
+}

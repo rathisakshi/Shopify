@@ -1,0 +1,77 @@
+{
+  "sections": {
+    "main": {
+      "type": "FAQs",
+      "blocks": {
+        "1e96c98b-6182-49b7-b567-e4f126127f41": {
+          "type": "FAQs",
+          "settings": {
+            "button_label": "Hi I am Sakshi",
+            "text": "<p> Enter your FAQ Answer<\/p>"
+          }
+        },
+        "748241cb-7c7c-4e22-a89a-bb1a6f98a8e7": {
+          "type": "FAQs",
+          "settings": {
+            "button_label": "<p>Enter your FAQ Question<\/p>",
+            "text": "<p> Enter your FAQ Answer<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1e96c98b-6182-49b7-b567-e4f126127f41",
+        "748241cb-7c7c-4e22-a89a-bb1a6f98a8e7"
+      ],
+      "settings": {
+        "accordion_color": "#c6b5df",
+        "background_color": "#8e4f4f"
+      }
+    },
+    "ce0bf738-2443-42c1-9056-7e567f272262": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18868922089768__ce0bf738-2443-42c1-9056-7e567f272262-1683277943e6d948fc-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "template--18868922089768__ce0bf738-2443-42c1-9056-7e567f272262-1683277943e6d948fc-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "template--18868922089768__ce0bf738-2443-42c1-9056-7e567f272262-1683277943e6d948fc-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18868922089768__ce0bf738-2443-42c1-9056-7e567f272262-1683277943e6d948fc-0",
+        "template--18868922089768__ce0bf738-2443-42c1-9056-7e567f272262-1683277943e6d948fc-1",
+        "template--18868922089768__ce0bf738-2443-42c1-9056-7e567f272262-1683277943e6d948fc-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ce0bf738-2443-42c1-9056-7e567f272262"
+  ]
+}

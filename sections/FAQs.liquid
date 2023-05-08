@@ -1,0 +1,98 @@
+{{ 'FAQs.css' | asset_url | stylesheet_tag }}
+
+<div class="container" style="background-color: {{ section.settings.background_color }}">
+  <div
+    class="{{ section.settings.content_alignment }}"
+  >
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'FAQs' -%}
+          <button class="accordion" style="background-color: {{ section.settings.accordion_color }}">
+            <span class="toggle-icon"></span>
+            {{- block.settings.button_label | escape -}}
+          </button>
+          <div class="panel">
+            <p>{{ block.settings.text }}</p>
+          </div>
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "FAQ Page",
+  "settings": [
+    {
+      "id": "accordion_color",
+      "type": "color",
+      "label": "Accordion Color",
+      "default": "#000"
+    },
+    {
+      "id": "background_color",
+      "type": "color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+      {
+      "type": "FAQs",
+      "name": "t:sections.rich-text.blocks.buttons.name",
+      "limit": 7,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+
+          "default": "<p>Enter your FAQ Question</p>",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_label_1.label",
+          "info": "t:sections.rich-text.blocks.buttons.settings.button_label_1.info"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p> Enter your FAQ Answer</p>",
+          "label": "t:sections.rich-text.blocks.text.settings.text.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "faq-accordion",
+      "category": "Custom"
+    },
+    {
+      "name": "faq-page",
+      "category": "Custom"
+    },
+    {
+      "name": "t:sections.rich-text.presets.name",
+      "blocks": [
+        {
+          "type": "FAQs"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+{% javascript %}
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+  	acc[i].addEventListener("click", function() {
+  		this.classList.toggle("active");
+  		var panel = this.nextElementSibling;
+  		if (panel.style.display === "block") {
+  			panel.style.display = "none";
+            this.querySelector('.toggle-icon').innerHTML = '+';
+  		} else {
+  			panel.style.display = "block";
+            this.querySelector('.toggle-icon').innerHTML = '-';
+  		}
+  	});
+  }
+{% endjavascript %}

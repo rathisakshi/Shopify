@@ -1,0 +1,4 @@
+.custom-text-section {
+  color: {{ section.settings.text_color }};
+  background-color: {{ section.settings.background_color }};
+}
